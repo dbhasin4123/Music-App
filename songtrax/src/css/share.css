@@ -1,0 +1,9 @@
+.selector-share p {
+    width: 50%;
+    padding-left: var(--spacing);
+}
+
+.selector-share > div {
+    width: 50%;
+    display: flex;
+}

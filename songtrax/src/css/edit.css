@@ -1,0 +1,16 @@
+.banner > input {
+    background-color: var(--fgColorLighter);
+    color: var(--fgColor);
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    font-family: "DynaPuff";
+    font-size: x-large;
+    border-radius: 0.75rem;
+    border: none;
+}
+
+.selector-edit p {
+    width: 5rem;
+    text-align: right;
+    padding-right: 1rem;
+}

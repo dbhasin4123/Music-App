@@ -1,0 +1,161 @@
+:root {
+    --spacing: 2rem;
+}
+
+@media screen and (max-width: 500pt) {
+    :root {
+        --spacing: 1rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    color: var(--fgColor);
+    background-color: var(--bgColor);
+    font-family: "Ubuntu";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Dynapuff";
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+::placeholder {
+    color: var(--fgColor);
+}
+
+main {
+    width: calc(100% - 2 * var(--spacing));
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+
+.box {
+    border: 2px solid var(--fgColor);
+    border-bottom-width: 4px;
+    width: 100%;
+    padding: 1rem var(--spacing);
+    margin-inline: auto;
+    column-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.box > .right {
+    float: right;
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: flex-end;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 500pt) {
+    .box {
+        flex-direction: column;
+    }
+
+    .box > .right {
+        align-self: flex-end;
+    }
+}
+
+.primary, .secondary {
+    padding: 0.5rem 0.75rem;
+    margin: auto;
+}
+
+.primary {
+    background-color: var(--bgColor);
+    border: 2px solid var(--fgColor);
+    color: var(--fgColor);
+}
+
+.secondary {
+    background-color: var(--fgColor);
+    border: 2px solid var(--fgColor);
+    color: var(--bgColor);
+}
+
+.primary:hover, .secondary:hover {
+    background-color: var(--purpleColorLighter);
+    border: 2px solid var(--purpleColorLighter);
+    color: var(--headerTextColor);
+}
+
+.greyed {
+    border-color: var(--fgColorLighter);
+    color: var(--fgColorLighter);
+}
+
+.greyed.center {
+    justify-content: center;
+}
+
+.selectors {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 0.5rem;
+    margin-top: var(--spacing);
+}
+
+.selector {
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.selector p {
+    margin-block: auto;
+}
+
+.selector input {
+    display: none;
+}
+
+.selector label {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    line-height: calc(2.5rem - 6px);
+}
+
+.button-group {
+    width: calc(100% - calc(2.5 * var(--spacing)));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    border: 2px solid var(--fgColor);
+    border-bottom-width: 4px;
+    justify-content: stretch;
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    /* TODO: remove !important */
+    margin: 0 !important;
+    padding: 0 !important;
+    border-width: 0 1px !important;
+}
+
+.button:first-child {
+    /* TODO: remove !important */
+    border-left-width: 0 !important;
+}
+
+.button:last-child {
+    /* TODO: remove !important */
+    border-right-width: 0 !important;
+}
